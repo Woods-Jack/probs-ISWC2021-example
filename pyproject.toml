@@ -15,6 +15,7 @@ jupytext = {version = "~=1.10.3", extras = ["myst"]}
 probs_ontology = {version = "~=1.5.2"}
 probs-runner = "^1.0.0"
 rdfox-runner = ">=0.1.7"
+importlib-resources = "^5.4.0"
 
 [tool.poetry.dev-dependencies]
 

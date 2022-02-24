@@ -71,7 +71,7 @@ def task_preprocess():
         ],
         'targets': data_csv,
         'actions': [
-            'python3 scripts/preprocess.py raw_data datasources'
+            'python scripts/preprocess.py raw_data datasources'
         ],
     }
 
