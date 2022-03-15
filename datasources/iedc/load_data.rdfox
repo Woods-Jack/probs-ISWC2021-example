@@ -1,0 +1,36 @@
+
+######################################################
+###          2_IUS_steel_200R Definition           ###
+######################################################
+
+dsource register delimitedFile "IEDC_steel_200R"                        \
+    file    "$(dir.root)/data/iedc/2_IUS_steel_200R.csv"    \
+    header  true                                                \
+    quote   '"'
+
+tupletable create ufrd:IEDC_steel_200R                                  \
+    dataSourceName  "IEDC_steel_200R"                                   \
+    "columns"       7                                           \
+    "1"             "{id}"                                      \
+    "1.datatype"    "string"                                    \
+    "2"             "{element}"                      \
+    "2.datatype"    "string"                                    \
+    "3"             "{process}"                      \
+    "3.datatype"    "string"                                    \
+    "4"             "{region}"                       \
+    "4.datatype"    "string"                                    \
+    "5"             "{time}"                         \
+    "5.datatype"    "string"                                    \
+    "6"             "{value}"                                   \
+    "6.if-empty"    "absent"                                    \
+    "6.datatype"    "xsd:decimal"                               \
+    "7"             "{unitcode}"                                \
+    "7.datatype"    "string"                                    \
+
+# 1 This is unique datapoint ID
+# 2 This is the element name, which will represent the iron object in this case
+# 3 This is the process name, which will represent the 'in use' process in this case
+# 4 This is the regional scope of the observation
+# 5 This is the temporal scope of the observation
+# 6 This is the datapoint value
+# 7 This is the associated units

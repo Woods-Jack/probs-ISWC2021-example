@@ -91,8 +91,10 @@ if __name__ == "__main__":
             "ct-2018-exports.csv",
             "ct-2018-imports.csv",
             "HSCodeandDescription_2017.csv",
-
         ],
+        "iedc": [
+            "2_IUS_steel_200R.csv"
+        ]
         # "object_mappings": [
         #     "object_mappings.csv",
         # ],

@@ -1,0 +1,14 @@
+:DirectObservation[?id] ,
+[?id, :objectDirectlyDefinedBy, ?Object],
+[?id, :processDefinedBy, ?process],
+[?id, :hasRegion, ?region],
+[?id, :hasTimePeriod, ?time],
+[?id, :measurement, ?value],
+[?id, :metric, ?unitcode]
+    :- ufrd:IEDC_steel_200R(?id,?element,?process,?region,?time,?value,?unitcode),
+    BIND(IRI(CONCAT(STR(sys:), ?id)) AS ?Object) .
+
+:Object[?Object],
+[?Object, :objectName, ?element]
+    :- ufrd:IEDC_steel_200R(?id,?element,?process,?region,?time,?value,?unitcode),
+    BIND(IRI(CONCAT(STR(sys:), ?id)) AS ?Object) .

@@ -1,4 +1,4 @@
 'ontology_files', (0, 56)
 'extract_rdf', (512, 3262)
-'conversion', (4096, 3224)
-'preprocess', (7680, 1457)
+'preprocess', (9216, 1590)
+'conversion', (15360, 3628)

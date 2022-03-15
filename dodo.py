@@ -26,6 +26,7 @@ data_csv = [
     'datasources/prodcom/PRODCOM2017DATA.csv',
     'datasources/prodcom/PRODCOM2018DATA.csv',
     'datasources/bgs/aggregates.csv',
+    'datasources/iedc/2_IUS_steel_200R.csv',
 ]
 
 data_scripts = [
@@ -37,6 +38,8 @@ data_scripts = [
     'datasources/object_mappings/map.dlog',
     'datasources/bgs/load_data.rdfox',
     'datasources/bgs/map.dlog',
+    'datasources/iedc/load_data.rdfox',
+    'datasources/iedc/map.dlog',
 ]
 
 ontology_ffs = [
@@ -67,7 +70,8 @@ def task_preprocess():
             'raw_data/PRODCOM2014DATA_extract.csv',
             'raw_data/PRODCOM2016DATA.csv',
             'raw_data/PRODCOM2017DATA.csv',
-            'raw_data/PRODCOM2018DATA.csv'
+            'raw_data/PRODCOM2018DATA.csv',
+            'raw_data/2_IUS_steel_200R.csv',
         ],
         'targets': data_csv,
         'actions': [
